@@ -1,0 +1,210 @@
+/*Global Styling*/
+body {
+    height: 80vh;
+}
+.jumbotron {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+.viewheight {
+    height: 65vh;
+}
+.container {
+    text-align: center;
+}
+/*Styling Start Button*/
+.start-button {
+    display: block;
+    width: 250px;
+    height: 250px;
+    border: none;
+    background-color: rgb(114, 11, 11);
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.start-button:hover {
+background-color: rgb(90, 76, 76);
+}
+.start-button:focus {
+background-color: #73AD21;
+outline: none;
+}
+.start-point {
+    margin-left: 40%;
+    margin-top: 2%;
+    margin-right: 40%;
+    margin-bottom: 0%;
+}
+
+.quiz-intro {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    padding-left: 0%;
+    text-justify: distribute;
+    padding-bottom: 15px;
+}
+.caution {
+    color: red;
+    font-size: 25px;
+}
+.text-center {
+    font-size: 85px;
+    font-weight: bolder;
+}
+
+/*Exam Page Styling*/
+#exam-jumbotron {
+    background-color: rgb(124, 115, 92);
+}
+#exam-text {
+    font-size: 40px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    color: rgb(26, 26, 122);
+}
+/*Styling the question area*/
+#checkbox {
+height: 50px;
+width: 70px;
+box-shadow: none;
+border: antiquewhite;
+box-shadow: none;
+}
+#clock-timer {
+position: relative;
+height: 60px;
+background-color: whitesmoke;
+float: right;
+margin: 3%;
+margin-top: 0;
+padding-top: 0px;
+font-size: 45px;
+width: 120px;   
+text-align: center; 
+font-weight: bolder;
+border-radius: 10px;
+border: none;
+font-family: 'sans-serif fonts';
+}
+#option-area-1, 
+#option-area-2,
+#option-area-3,
+#option-area-4 {
+    font-size: 28px;
+    padding-left: 1.5%;
+    word-wrap: normal;
+    color: black; 
+}
+#question-area {
+    font-size: 50px;
+    color: brown;
+}
+.form-control:focus{
+    border-color: #ced4da;
+    box-shadow: none;
+  }
+#correct
+{
+    background-color: green;
+}
+/*--Using the same page for ALL reporting----*/
+.dashboard {
+    display: none;   
+}
+div.dashboard {
+    zoom: 81%;
+}
+#dashText {
+    font-size: 44px;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#yourDash {
+    font-size: 60px;
+    color: darkblue;
+    margin: 20px;
+    font-weight: bolder;
+}
+.box-buttom {
+    margin-bottom: 1%;
+}
+.try-again {
+    margin-right: 450px;
+}
+.scoreDiv {
+    background-color: rgb(211, 208, 208);
+    font-size: 30px;
+    color: black;    
+}
+#scorerName {
+    font-weight: bold;     
+}
+#scorerScore {   
+    font-weight: bolder;
+    color: blue;
+    padding-left: 100px;
+}
+#scoreDashboard {
+    font-size: 30px !important;
+}
+#player-name {
+    font-size: 40px;
+    color: green;
+    font-weight: bold;
+}
+
+/* General Body font type */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxing{
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(84, 95, 64);
+    font-size: 25px;
+    color: white;
+    font-weight: bolder;
+}
+/* Player Name area Styling*/
+#inputName{
+    border-radius: 5px;    
+}
+/* Submit Buton Styling*/
+#submit-button {
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 15px;
+    background-color: rgb(226, 214, 214);
+    box-shadow: sienna;
+}
+/*Main Dashboard Area Styling*/
+#try-again,
+#reset-scoresheet {
+    color: rgb(10, 10, 9);
+    font-weight: bold;
+    width: 300px;
+    background-color: slategray;
+    border-radius: 15px;
+}
+#try-again {
+    margin-right: 150px;
+    background-color: green;
+}
+#reset-scoresheet {
+    margin-left: 100px;
+    background-color: brown;
+}
+
+

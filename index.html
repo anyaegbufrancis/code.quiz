@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta http-equiv="refresh" content="50000">
 <head>
     <meta charset="UTF-8">    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,18 +11,58 @@
     <title>Quiz Project</title>
 </head>
 <body>
+    <!--Main Landing Page jumbotron-->
 <div class="jumbotron">
-    <h1 class="text-center">Welcome To Lion King Quiz Testing System</h1>
+    <h2 class="text-center">Welcome Quiz Testing System</h2>
     <div class="quiz-intro">
-        <i>This quiz tests your knowledge of the movie by presenting you with multiple choice questions. Please choose by clicking an answer.
-            <p><span class="caution">Key:</span> For each correct choice, you proceed to th next but for every wrong choice, 2 seconds is deducted from remaining time<br></p>
+        <i class="introduction">This quiz tests your knowledge of the movie - Lion King by presenting you with multiple choice questions. Please choose by clicking an answer.
+            <p><span class="caution">Key:</span> For each correct choice, you proceed to th next but for every wrong choice, 5 seconds is deducted from remaining time</p>
              Enjoy!!
         </i>
     </div>
     </div>
-
+    <!--Exam Start Button-->
     <div class="start-point">
         <button class="start-button" id="start-button"><h1>START</h1></button>
-    </div>    
+    </div>
+    <!--Hidden exam page container for page validation-->
+    <div class="container" hidden>
+        <div class="row">
+            <div class="col-md-12" id="answer">
+                <div class="input-group mb-3" id="check1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-1" id="option-area-1" name="choice1" readonly>
+                </div>
+                <div class="input-group mb-3" id="check2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox checkbox2" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-2" id="option-area-2" name="choice2" readonly>
+                </div>
+                <div class="input-group mb-3" id="check3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-3" id="option-area-3" name="choice3" readonly>
+                </div>
+                <div class="input-group mb-3" id="check4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-4" id="option-area-4" name="choice4" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

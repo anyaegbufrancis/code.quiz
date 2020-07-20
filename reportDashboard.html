@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="refresh" content="10000">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+    <title>Quiz Project</title>
+</head>
+<body class="dashboardBody">
+    <!-------------------------Completion Page--------------------------->
+    <div class="completion">
+        <div class="jumbotron">
+            <h1 class="text-center">Quiz Completed!</h1>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 boxing">
+                    <div>Your Final Score is: <span id="yourScore"></span></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 boxing">
+                    <div>Please input your initials to see how you compare to other quiz takers:</div>
+                    <form>
+                        <input type="text" id="inputName" required>
+                        <button type="button" class="submit-button" id="submit-button" onclick="displayReport();"
+                            aria-required="true">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <!-------------------------Dashboard Page--------------------------->
+    <div class="dashboard">
+        <div class="jumbotron">
+            <h1 class="text-center">Report Dashboard!</h1>
+            <br>
+        </div>
+        <div class="container dashboard">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 boxing">
+                        <h1>Performance Dashboard</h1>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="dashText" id="dashText"><span id="player-name"></span> your final Score is:<span
+                                id="yourDash"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container box-buttom">
+                    <div class="row">
+                        <div class="col-md-12 boxing">
+                            <div class="topScorers">TOP 6 SCORERS</div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped" id="scoreDashboard">
+                    <div></div>
+                </table>
+                <hr>
+                <hr>
+                <button type="button" class="btn" id="try-again">
+                    <h1>Try Again</h1>
+                </button>
+                <button type="button" class="btn" id="reset-scoresheet">
+                    <h1>Reset</h1>
+                </button>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------Placeholder for Hiddge Page Validation--------------->
+
+    <div class="container" hidden>
+        <div class="row">
+            <div class="col-md-12" id="answer">
+                <div class="input-group mb-3" id="check1">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-1" id="option-area-1" name="choice1"
+                        readonly>
+                </div>
+                <div class="input-group mb-3" id="check2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox checkbox2" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-2" id="option-area-2" name="choice2"
+                        readonly>
+                </div>
+                <div class="input-group mb-3" id="check3">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-3" id="option-area-3" name="choice3"
+                        readonly>
+                </div>
+                <div class="input-group mb-3" id="check4">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">
+                            <input type="radio" class="checkbox" id="checkbox" name="radAnswer">
+                        </div>
+                    </div>
+                    <input type="textbox" class="form-control form-control-4" id="option-area-4" name="choice4"
+                        readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
