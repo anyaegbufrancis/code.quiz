@@ -15,6 +15,29 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
 
+# Project Landing Page
+
+<img src="./LangingPage.png"/>
+
+# Project Question Page
+
+<img src="./questionPage.png"/>
+
+# Project Completion Page
+
+<img src="./CompletionPage.png"/>
+
+# Project Report Dashboard
+
+<img src="./ReportDashboard.png"/>
+
+
+# Link To Project:
+
+Please click [here](https://anyaegbufrancis.github.io/code.quiz/) to view the github hosted project.
+
+
+
 ## APPROACH
 
 The approach adopted is as follows:
@@ -45,3 +68,7 @@ The finished work is made up of the following:
 - Local Storage was employed as placeholder for values in this project.
 - Certain page are reused for multiple functions by hiding some elements on the page.
 - Functions are employed whereever possible to make the product a bit modular.
+
+# Future Efforts
+
+* The timer presently kicks in at the instruction page of the test and is not restricted to the question pages again. The pages reloads completion page at the expiration of the set time. A little more time will be devoted to fixing this.

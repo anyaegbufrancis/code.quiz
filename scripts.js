@@ -2,7 +2,7 @@
 //Declare reusable global variables
 var yourScore = 0;
 var i=0;
-var refTime = 60;
+//var refTime = 10;
 
 // Array for ALL Questions called questionBank
 var questionBank = [
@@ -119,21 +119,25 @@ var random10Test = shuffle(questionBank);
 //Choosing 11 Questions from randomized Question Array
 random10Test = random10Test.slice(0, 11);
 
-//Function that counts down from 60sec and goes to reporting dashboard on countdown to 0
+//Countown timer function
+var refTime = 60;
 function countDownTime() {
-    var counter = setInterval(function () {
-      refTime--;
-       $('#clock-timer').text(refTime);
-        if(refTime <= 0){
-            clearInterval(counter);
-           location.replace('reportDashboard.html');
-        }        
-   }, 1000);
+    if (refTime < 0) {
+        toDashboard()
+    }  else {
+        setTimeout(function(){countDownTime();}, 1000);
+        $('#clock-timer').text(refTime);
+        refTime--; 
+    }
 } 
 
+function toDashboard () {
+    location.replace('reportDashboard.html');    
+    event.preventDefault()
+}
 //Function that display the hidden question on each page to pass page validation
-function firstQuestion() {
-     countDownTime();
+function firstQuestion() { 
+    countDownTime()
      $('#question-area').text(random10Test[0].question);
      $('#option-area-1').val(random10Test[0].choices[0]);
      $('#option-area-2').val(random10Test[0].choices[1]);
@@ -146,11 +150,13 @@ function firstQuestion() {
 //To display only 10 randomized questions each time but 11th in the array hidden 
 //in the main pages for validation
 firstQuestion();
+
 function newQuestion(){
-    if( i === 10){    
+    if( i === 10)
+    {    
     location.replace('reportDashboard.html');
-    event.preventDefault();
-    }
+    event.preventDefault();    
+    } else {
      $('#question-area').text(random10Test[i+1].question);
      $('#option-area-1').val(random10Test[i+1].choices[0]);
      $('#option-area-2').val(random10Test[i+1].choices[1]);
@@ -158,7 +164,7 @@ function newQuestion(){
      $('#option-area-4').val(random10Test[i+1].choices[3]);
      resetAnswer();
     i++;
-}
+}}
 
 //Function that resets the previous styling done after chosing and answer
 function resetAnswer() {
@@ -201,7 +207,7 @@ function testConditions() {console.log(yourScore)
         event.preventDefault()
         yourScore;
         localStorage.setItem('Your Score', yourScore);
-        refTime = refTime-4;
+        refTime = refTime-5;
         $(this).children().children().children('.checkbox').prop('checked', true);
         $(this).children().siblings('.form-control').css('background-color', 'red');
         setTimeout(function(){newQuestion()},94); 
@@ -296,9 +302,9 @@ function startQuiz() {
 function insertTable() {
     scoreList = JSON.parse(localStorage.getItem('scoreList'));
     scoreList = scoreList.sort((a, b) => parseFloat(b.Score) - parseFloat(a.Score));
-        $('#scoreDashboard').append('<thead><tr><th scope="col">S/N</th><th scope="col">Name</th><th scope="col">Score</th></tr></thead><tbody>');
+        $('#scoreDashboard').append('<thead><tr><th scope="col-9">S/N</th><th scope="col">Name</th><th scope="col">Score</th></tr></thead><tbody>');
           for (var i = 0; i < scoreList.length; i++) {         
-        $('#scoreDashboard').append('<tr><th scope="row">' + (i+1) + '</th><td>' + scoreList[i].Name+ '</td><td>' + scoreList[i].Score + '</td></tr>');
+        $('#scoreDashboard').append('<tr><th scope="col-9">' + (i+1) + '</th><td>' + scoreList[i].Name+ '</td><td>' + scoreList[i].Score + '</td></tr>');
         }
     $('#scoreDashboard').children().append('</tbody>');    
 }
