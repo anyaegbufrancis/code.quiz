@@ -17,19 +17,19 @@ THEN I can save my initials and score
 
 # Project Landing Page
 
-<img src="./LangingPage.png"/>
+<img src="./LangingPage.PNG"/>
 
 # Project Question Page
 
-<img src="./questionPage.png"/>
+<img src="./questionPage.PNG"/>
 
 # Project Completion Page
 
-<img src="./CompletionPage.png"/>
+<img src="./CompletionPage.PNG"/>
 
 # Project Report Dashboard
 
-<img src="./ReportDashboard.png"/>
+<img src="./ReportDashboard.PNG"/>
 
 
 # Link To Project:
